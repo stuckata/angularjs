@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="">
+		<title>Student Page</title>
+	</head>
+	<body>
+		<div ng-app="app" ng-controller="studentsController">
+			<span>Students:</span>
+			<ul ng-repeat="student in allStudents">
+				<li>Name: {{ student.name }}</li>
+				<li>Photo: <img ng-src="{{ student.photo }}" alt="studentPhoto" /></li>
+				<li>Grade: {{ student.grade }}</li>
+				<li>School: {{ student.school }}</li>
+				<li>Teacher: {{ student.teacher }}</li>
+			</ul>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<script src="app.js"></script>
+	</body>
+
+</html>
